@@ -5,6 +5,7 @@ const express = require("express");
 const connectToDb = require("./db/db");
 const userRoutes = require("./routes/user.route");
 const cookieParser = require("cookie-parser");
+const captainRoutes = require("./routes/captain.route");
 
 
 
@@ -24,5 +25,6 @@ app.get("/",(req,res)=>{
     res.send("hello world");
 })
 app.post("/users",userRoutes)
+app.post("/captains",captainRoutes)
 
 module.exports=app;
